@@ -8,26 +8,26 @@ func main() {
 	var mult2 = 5
 	var x = 0
 	var i = 1
-	var lastMult = 0
-	for lastMult <= limit-mult1 {
-		lastMult = i * mult1
+	var lastMult = i * mult1
+	for lastMult < limit {
 		x += lastMult
 		i++
+		lastMult = i * mult1
 	}
 	i = 1
-	lastMult = 0
-	for lastMult <= limit-mult2 {
-		lastMult = i * mult2
+	lastMult = i * mult2
+	for lastMult < limit {
 		x += lastMult
 		i++
+		lastMult = i * mult2
 	}
 	var multDup = mult1 * mult2
 	i = 1
-	lastMult = 0
-	for lastMult <= limit-multDup {
-		lastMult = i * multDup
+	lastMult = i * multDup
+	for lastMult < limit {
 		x -= lastMult
 		i++
+		lastMult = i * multDup
 	}
 	fmt.Println(x)
 }
