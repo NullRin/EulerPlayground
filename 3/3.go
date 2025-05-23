@@ -58,8 +58,6 @@ func primeSolution(number int) int {
 			if number == 1 {
 				break
 			}
-			primeCount = 0
-			factor = primes[primeCount]
 			continue
 		}
 		primeCount++
