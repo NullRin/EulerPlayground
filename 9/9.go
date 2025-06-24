@@ -8,7 +8,7 @@ func main() {
 	var mStart = 1
 	var m, n int
 	var a, b, c int
-	for {
+	for 2*m < target {
 		mStart++
 		m = mStart
 		n = mStart - 1
@@ -22,8 +22,9 @@ func main() {
 			m++
 		}
 		if a+b+c == target {
+			fmt.Println(a, b, c)
 			break
 		}
 	}
-	fmt.Println(a, b, c)
+	fmt.Println("End")
 }
