@@ -10,12 +10,16 @@ func main() {
 	var notPrimes = make([]bool, limit)
 	notPrimes[0] = true
 	notPrimes[1] = true
-	var i = 2
+	var i = 1
 	var j = i
 	var index = 0
 	var max = int(math.Sqrt(float64(limit))) + 1
 	for i < max {
+		i++
 		j = i
+		if notPrimes[i] {
+			continue
+		}
 		for {
 			index = i * j
 			if index >= limit {
@@ -24,7 +28,6 @@ func main() {
 			notPrimes[index] = true
 			j++
 		}
-		i++
 	}
 	var sumOfPrimes = 0
 	for prime, notPrime := range notPrimes {
