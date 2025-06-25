@@ -32,7 +32,7 @@ func main() {
 			i = 1
 			total = 1
 			tempX = x
-			for i <= 4 {
+			for i <= adjacentCount {
 				value = values[getXY(tempX, y)]
 				total *= int(value)
 				i++
@@ -56,7 +56,7 @@ func main() {
 			i = 1
 			total = 1
 			tempY = y
-			for i <= 4 {
+			for i <= adjacentCount {
 				value = values[getXY(x, tempY)]
 				total *= int(value)
 				i++
@@ -81,7 +81,7 @@ func main() {
 			total = 1
 			tempX = x
 			tempY = y
-			for i <= 4 {
+			for i <= adjacentCount {
 				value = values[getXY(tempX, tempY)]
 				total *= int(value)
 				i++
@@ -108,7 +108,7 @@ func main() {
 			total = 1
 			tempX = x
 			tempY = y
-			for i <= 4 {
+			for i <= adjacentCount {
 				value = values[getXY(tempX, tempY)]
 				total *= int(value)
 				i++
