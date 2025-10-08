@@ -18,15 +18,13 @@ func main() {
 		temp = 0
 		carry = 0
 		for j < length-1 {
-			temp = sum[j] << 1
+			temp = (sum[j] << 1) + carry
+			carry = 0
 			if temp >= 10 {
 				temp = temp - 10
-				sum[j] = temp + carry
 				carry = 1
-			} else {
-				sum[j] = temp + carry
-				carry = 0
 			}
+			sum[j] = temp
 			j++
 		}
 		i++
