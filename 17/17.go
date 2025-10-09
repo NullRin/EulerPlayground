@@ -44,7 +44,7 @@ func main() {
 	var hundredsAndSums = 0
 	for i < len(ones) {
 		// "{ones} hundred and" = ones[i] + 10
-		hundredsAndSums += len(ones[i]) + 10
+		hundredsAndSums += (len(ones[i]) + 10) * 99
 		i++
 	}
 	var hundredsAndLessThan100Sums = hundredsAndSums + (9 * lessThan100Sums)
